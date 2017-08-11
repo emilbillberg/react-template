@@ -1,31 +1,20 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import Home from './home/home.js';
-import About from './about/about.js';
+import { Switch, Route } from 'react-router-dom';
+import Header from './core/header/header.js';
+import HomeContainer from './home/index.js';
+import AboutContainer from './about/index.js';
 import NotFound from './not-found/not-found.js';
 import './app.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
-  componentDidMount() {
-    console.log('App componentDidMount');
-  }
-  
+class App extends Component {  
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-        </div>
+      <div>
+        <Header/>
         <Switch>
-          <Route exact path='/' render={(props) => (<Home {...props} store={this.props.store} />)}/>
-          <Route path='/about' component={About}/>
-          <Route path='*' component={NotFound}/>
+          <Route path='/' exact component={HomeContainer} />
+          <Route path='/about' exact component={AboutContainer} />
+          <Route path='*' component={NotFound} />
         </Switch>
       </div>
     );

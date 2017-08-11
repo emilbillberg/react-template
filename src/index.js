@@ -1,31 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
-import { createStore } from 'redux';
-import './index.css';
+import { Provider } from 'react-redux';
 import App from './app/app.js';
-import registerServiceWorker from './registerServiceWorker';
+import store from './app/core/store/index.js';
+import './index.css';
+// import registerServiceWorker from './registerServiceWorker';
 
-const initialState = { count: 1 };
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'TEST':
-      state.count++;
-      return state;
-    default:
-      return state;
-  }
-};
-const store = createStore(reducer, initialState);
-
-const render = () => {
-  ReactDOM.render((
+ReactDOM.render((
+  <Provider store={store}>
     <BrowserRouter>
-      <App store={store}/>
+      <App/>
     </BrowserRouter>
-  ), document.getElementById('root'), null);
-}
-
-render()
-store.subscribe(render)
-// registerServiceWorker();
+  </Provider>
+), document.getElementById('root'), null);
