@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './core/header/header.js';
-import HomeContainer from './home/index.js';
-import AboutContainer from './about/index.js';
-import NotFound from './not-found/not-found.js';
+import HomeContainer from './home/home-container.js';
+import TeamsContainer from './teams/teams-container';
+import FavoritesContainer from './favorites/favorites-container.js';
+import TicketsContainer from './tickets/tickets-container.js';
+import NotFoundContainer from './not-found/not-found-container.js';
 import './app.css';
 
 class App extends Component {  
@@ -12,9 +14,11 @@ class App extends Component {
       <div>
         <Header/>
         <Switch>
-          <Route path='/' exact component={HomeContainer} />
-          <Route path='/about' exact component={AboutContainer} />
-          <Route path='*' component={NotFound} />
+          <Route path='/' exact component={ HomeContainer } />
+          <Route path='/teams' component={ TeamsContainer } />
+          <Route path='/favorites' exact component={ FavoritesContainer } />
+          <Route path='/tickets' component={ TicketsContainer } />
+          <Route component={ NotFoundContainer } />
         </Switch>
       </div>
     );

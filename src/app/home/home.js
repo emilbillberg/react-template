@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
+        <h1>Home!</h1>
         <div>Count: {this.props.counter}</div>
         <Button onClick={this.props.onIncrement}>Increment</Button>
       </div>

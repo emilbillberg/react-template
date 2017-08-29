@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
-class NotFound extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
-  componentDidMount() {
-    console.log('Home componentDidMount');
-  }
-  
+class NotFound extends Component {  
   render() {
     return (
       <h1>

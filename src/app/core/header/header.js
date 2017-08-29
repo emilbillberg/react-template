@@ -7,7 +7,9 @@ class Header extends Component {
     return (
       <header className="header-container">
         <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
+        <Link to='/favorites/'>Favorites</Link>
+        <Link to='/teams/'>Teams</Link>
+        <Link to='/tickets/'>Tickets</Link>
       </header>
     );
   }
