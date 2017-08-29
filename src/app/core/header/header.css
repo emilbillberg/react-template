@@ -1,7 +1,7 @@
-.header-container {
+.header {
   display: flex;
 }
 
-.header-container a {
+.header a {
   padding-right: .8rem;
 }

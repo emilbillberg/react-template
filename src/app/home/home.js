@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import CSSModules from 'react-css-modules';
 import Button from '../shared/button/button.js';
-import './home.css';
+import styles from './home.css';
 
 class Home extends Component {
   render() {
@@ -14,4 +15,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default CSSModules(Home, styles);
