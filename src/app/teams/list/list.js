@@ -13,7 +13,7 @@ class List extends Component {
       <div>
         <h1>Teams</h1>
         <ul>
-        { list.map((item) => { 
+        { list.map((item) => {
           return <li key={ item.id }>
             <Link to="/teams/detail/">{ item.name }</Link>
           </li>

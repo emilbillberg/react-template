@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { incrementCounter } from './../core/actions/index.js';
+import { incrementCounter } from './../core/actions/counter.js';
 import Home from './home.js';
 import './home.css';
 

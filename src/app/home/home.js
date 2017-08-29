@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '../shared/button/button.js';
 import './home.css';
 
-class Home extends Component {  
+class Home extends Component {
   render() {
     return (
       <div>
