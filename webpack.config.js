@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -25,6 +26,11 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin("index.css"),
+    new CopyWebpackPlugin([
+      { from: 'src/server.js', to: 'server.js' },
+      { from: 'src/manifest.json', to: 'manifest.json' },
+      { from: 'src/assets/svg/**/*', to: 'assets/svg', flatten: true },
+    ])
   ],
 };
 

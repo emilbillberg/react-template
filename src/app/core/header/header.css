@@ -3,5 +3,6 @@
 }
 
 .header a {
+  color: var(--accent-color);
   padding-right: .8rem;
 }
