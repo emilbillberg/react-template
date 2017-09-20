@@ -1,5 +1,8 @@
 .header {
   display: flex;
+  align-items: center;
+  background-color: blue;
+  height: 6.4rem;
 }
 
 .header a {

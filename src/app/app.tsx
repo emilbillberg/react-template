@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import CSSModules from 'react-css-modules';
-import Header from './core/header/header.js';
-import HomeContainer from './home/home-container.js';
+import * as CSSModules from 'react-css-modules';
+import Header from './core/header/header';
+import HomeContainer from './home/home-container';
 import TeamsContainer from './teams/teams-container';
-import FavoritesContainer from './favorites/favorites-container.js';
-import TicketsContainer from './tickets/tickets-container.js';
-import NotFoundContainer from './not-found/not-found-container.js';
-import Styles from './app.css';
+import FavoritesContainer from './favorites/favorites-container';
+import TicketsContainer from './tickets/tickets-container';
+import NotFoundContainer from './not-found/not-found-container';
+import * as Styles from './app.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>

@@ -39,24 +39,20 @@ app.use(route.get('*', async(ctx) => {
       <link rel="stylesheet" href="index.css">
 
       <script>
-      var observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          // Display each reported measurement on console
-          if (console) {
-            console.log("Name: "       + entry.name      +
-                        ", Type: "     + entry.entryType +
-                        ", Start: "    + entry.startTime +
-                        ", Duration: " + entry.duration  + "\n");
-          }
-        })
-      });
-      observer.observe({entryTypes: ['resource', 'mark', 'measure']});
-      performance.mark('registered-observer');
-
-
-        performance.measure('button clicked');
-    </script>
-
+        var observer = new PerformanceObserver(list => {
+          list.getEntries().forEach(entry => {
+            // Display each reported measurement on console
+            if (console) {
+              console.log("Name: "       + entry.name      +
+                          ", Type: "     + entry.entryType +
+                          ", Start: "    + entry.startTime +
+                          ", Duration: " + entry.duration);
+            }
+          })
+        });
+        observer.observe({entryTypes: ['resource', 'mark', 'measure']});
+        performance.mark('registered-observer');
+      </script>
 
     </head>
     <body>
